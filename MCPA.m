@@ -8,12 +8,14 @@ system.deltaT = 1E-6;
 system.totalT = 0;
 electron.m = 1.109E-31; %kg
 
-if(nargin < 2)
+if(nargin < 3)
     electron.x = 0; %m
     electron.v = 0; %m/s
+    numLoops = 100;
 else
     electron.x = initialX; 
     electron.v = initialV;
+    
 end
 
 ForceMratio = system.force./electron.m;
